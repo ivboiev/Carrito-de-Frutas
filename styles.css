@@ -1,0 +1,121 @@
+body {
+  font-family: 'freight-big-pro';
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Estilo para la lista de productos */
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Tres productos por fila */
+ 
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo para cada producto */
+li {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilo de imagen */
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la paginación */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilo de botón */
+button {
+  padding: 8px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 24px;
+  background-color: #fff;
+  color: #3c4043;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0,
+    rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms linear,
+    transform 270ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+button:hover {
+  background-color: #F6F9FE;
+  color: #174ea6;
+}
+
+button:active {
+  box-shadow: 0 4px 4px 0 rgba(60, 64, 67, 0.3),
+    0 8px 12px 6px rgba(60, 64, 67, 0.15);
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+  box-shadow: none;
+}
+
+/* Estilo para el sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
+/* Estilo para la barra de desplazamiento del sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
